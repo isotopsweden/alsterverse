@@ -36,8 +36,7 @@
 
 .links{
   grid-column: 2/3;
-  display: flex;
-  flex-direction: column;
+  display:grid;
 }
 
 .links a{
