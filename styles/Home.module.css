@@ -1,4 +1,6 @@
 .hero{
+  position:relative;
+  z-index: 1;
 }
 
 
@@ -28,6 +30,7 @@
   height: 530px;
   aspect-ratio: 499/265;
   object-fit: cover;
+  margin-top:-50px
 }
 
 .footer *{
@@ -36,7 +39,22 @@
 
 .links{
   grid-column: 2/3;
-  display:grid;
+  display: flex;
+  flex-direction: column;
+}
+
+.hover{
+  position:relative;
+  width:100%;
+}
+
+.hover img{
+  position:absolute;
+  inset:0;
+}
+
+.links > * {
+  grid-column: 1;
 }
 
 .links a{
@@ -46,8 +64,9 @@
   transition: .5s;
 }
 
-.links a:hover{
-  filter:saturate(2);
+.divider{
+  width:40px;
+  margin:auto;
 }
 
 @media screen and (min-width:768px){
@@ -58,7 +77,7 @@
   .links{
     padding: 0 1rem;
     grid-column: 1/4;
-    flex-direction: row;
     gap:40px;
+    display: grid;
   }
 }
